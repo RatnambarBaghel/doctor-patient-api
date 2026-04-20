@@ -1,11 +1,41 @@
+<<<<<<< HEAD
 # 🏥 Doctor Patient Management API
 
 A backend system built using **FastAPI** and **MySQL** to manage doctors, patients, and their assignments (appointments/relationships).
+=======
+<<<<<<< HEAD
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+# 🏥 Doctor Patient Management API
+
+A scalable backend system built using **FastAPI** and **MySQL** to manage doctors, patients, and their assignments efficiently.
+=======
+# 🏥 Doctor Patient Management API
+
+A backend system built using **FastAPI** and **MySQL** to manage doctors, patients, and their assignments (appointments/relationships).
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
 ## 🚀 Features
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+* 👨‍⚕️ Doctor Management (CRUD)
+* 🧑 Patient Management (CRUD with Soft Delete)
+* 🔗 Doctor ↔ Patient Assignment System
+* 🚫 Prevent duplicate assignments
+* 🏥 Patient discharge system
+* 🗄️ MySQL Database Integration
+* 🔄 SQLAlchemy ORM with Relationships
+* 📄 Interactive API Docs (Swagger UI)
+=======
+>>>>>>> b10f97c
 * 👨‍⚕️ Doctor Management (Create, Read, Delete)
 * 🧑‍🤝‍🧑 Patient Management (Create, Read, Soft Delete)
 * 🔗 Doctor ↔ Patient Assignment System
@@ -14,15 +44,34 @@ A backend system built using **FastAPI** and **MySQL** to manage doctors, patien
 * 🗄️ MySQL Database Integration
 * 🔄 SQLAlchemy ORM with Relationships
 * 📄 Auto API Docs using Swagger UI
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
 ## 🧠 Tech Stack
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+| Layer    | Technology |
+| -------- | ---------- |
+| Backend  | FastAPI    |
+| Database | MySQL      |
+| ORM      | SQLAlchemy |
+| Language | Python     |
+=======
+>>>>>>> b10f97c
 * **Backend:** FastAPI
 * **Database:** MySQL
 * **ORM:** SQLAlchemy
 * **Language:** Python
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
@@ -49,25 +98,61 @@ app/
 
 ---
 
+<<<<<<< HEAD
 ## ⚙️ Setup Instructions
+=======
+<<<<<<< HEAD
+## ⚙️ Installation & Setup
+=======
+## ⚙️ Setup Instructions
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ### 1️⃣ Clone the repository
 
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+git clone https://github.com/YOUR_USERNAME/doctor-patient-api.git
+cd doctor-patient-api
+```
+
+=======
+>>>>>>> b10f97c
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
 ```
 
 ---
 
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 ### 2️⃣ Create virtual environment
 
 ```
 python -m venv venv
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+venv\Scripts\activate
+```
+
+## 📸 API Preview
+
+![Swagger UI](./assets/swagger.png)
+=======
+>>>>>>> b10f97c
 venv\Scripts\activate   (Windows)
 ```
 
 ---
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ### 3️⃣ Install dependencies
 
@@ -75,6 +160,18 @@ venv\Scripts\activate   (Windows)
 pip install -r requirements.txt
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+### 4️⃣ Configure Database
+
+Update:
+
+```
+app/core/database.py
+```
+=======
+>>>>>>> b10f97c
 ---
 
 ### 4️⃣ Configure Database
@@ -82,12 +179,24 @@ pip install -r requirements.txt
 Update your database URL in:
 
 📁 `app/core/database.py`
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ```
 DATABASE_URL = "mysql+pymysql://username:password@localhost/hospital_db"
 ```
 
+<<<<<<< HEAD
 > ⚠️ If your password contains `@`, replace it with `%40`
+=======
+<<<<<<< HEAD
+> ⚠️ Replace `@` in password with `%40` if needed
+=======
+> ⚠️ If your password contains `@`, replace it with `%40`
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
@@ -101,7 +210,15 @@ uvicorn app.main:app --reload
 
 ## 📄 API Documentation
 
+<<<<<<< HEAD
 After running the server, open:
+=======
+<<<<<<< HEAD
+Open in browser:
+=======
+After running the server, open:
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ```
 http://127.0.0.1:8000/docs
@@ -111,6 +228,41 @@ http://127.0.0.1:8000/docs
 
 ---
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## 🔑 Core Endpoints
+
+### Doctors
+
+* `POST /doctors/`
+* `GET /doctors/`
+* `DELETE /doctors/{id}`
+
+### Patients
+
+* `POST /patients/`
+* `GET /patients/`
+* `DELETE /patients/{id}` (Soft Delete)
+
+### Assignments
+
+* `POST /assignments/`
+* `GET /assignments/`
+* `GET /assignments/doctor/{id}`
+* `PUT /assignments/discharge/{id}`
+
+---
+
+## 🧠 Key Concepts
+
+* ORM Relationships (Doctor ↔ Assignment ↔ Patient)
+* Soft Delete Pattern
+* Data Validation with Pydantic
+* REST API Design
+* Dependency Injection (FastAPI)
+=======
+>>>>>>> b10f97c
 ## 🔑 API Endpoints
 
 ### 👨‍⚕️ Doctors
@@ -144,25 +296,59 @@ http://127.0.0.1:8000/docs
 * 🧹 Soft Delete (Patient deactivation)
 * 🚫 Duplicate Prevention Logic
 * 🔗 Automatic JOIN using SQLAlchemy relationships
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
 ## 🔮 Future Improvements
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+* 🔐 JWT Authentication
+* 🔑 Password Hashing
+* 📅 Appointment Scheduling
+* 🎨 Frontend UI (React)
+* 📊 Admin Dashboard
+=======
+>>>>>>> b10f97c
 * 🔐 JWT Authentication (Login system)
 * 🔑 Password Hashing
 * 🎨 Frontend (React / HTML UI)
 * 📊 Dashboard for Doctors & Patients
 * 📅 Appointment Scheduling System
+<<<<<<< HEAD
+=======
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
 ## 👨‍💻 Author
 
+<<<<<<< HEAD
 **Ratnambar baghel**
+=======
+<<<<<<< HEAD
+**Ratnambar Baghel**
+=======
+**Ratnambar baghel**
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
 
 ---
 
 ## ⭐ Support
 
+<<<<<<< HEAD
 If you like this project, give it a ⭐ on GitHub!
+=======
+<<<<<<< HEAD
+If you found this useful, give it a ⭐ on GitHub!
+=======
+If you like this project, give it a ⭐ on GitHub!
+>>>>>>> c0abe50 (Clean FastAPI project setup)
+>>>>>>> b10f97c
