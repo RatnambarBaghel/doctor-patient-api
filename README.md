@@ -72,6 +72,10 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+## 📸 API Preview
+
+![Swagger UI](./assets/swagger.png)
+
 ### 3️⃣ Install dependencies
 
 ```
