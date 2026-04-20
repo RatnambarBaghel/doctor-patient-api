@@ -1,28 +1,35 @@
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # 🏥 Doctor Patient Management API
 
-A backend system built using **FastAPI** and **MySQL** to manage doctors, patients, and their assignments (appointments/relationships).
+A scalable backend system built using **FastAPI** and **MySQL** to manage doctors, patients, and their assignments efficiently.
 
 ---
 
 ## 🚀 Features
 
-* 👨‍⚕️ Doctor Management (Create, Read, Delete)
-* 🧑‍🤝‍🧑 Patient Management (Create, Read, Soft Delete)
+* 👨‍⚕️ Doctor Management (CRUD)
+* 🧑 Patient Management (CRUD with Soft Delete)
 * 🔗 Doctor ↔ Patient Assignment System
-* ❌ Prevent duplicate assignments
-* 🏥 Discharge patients from doctors
+* 🚫 Prevent duplicate assignments
+* 🏥 Patient discharge system
 * 🗄️ MySQL Database Integration
 * 🔄 SQLAlchemy ORM with Relationships
-* 📄 Auto API Docs using Swagger UI
+* 📄 Interactive API Docs (Swagger UI)
 
 ---
 
 ## 🧠 Tech Stack
 
-* **Backend:** FastAPI
-* **Database:** MySQL
-* **ORM:** SQLAlchemy
-* **Language:** Python
+| Layer    | Technology |
+| -------- | ---------- |
+| Backend  | FastAPI    |
+| Database | MySQL      |
+| ORM      | SQLAlchemy |
+| Language | Python     |
 
 ---
 
@@ -49,25 +56,21 @@ app/
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/YOUR_USERNAME/doctor-patient-api.git
+cd doctor-patient-api
 ```
-
----
 
 ### 2️⃣ Create virtual environment
 
 ```
 python -m venv venv
-venv\Scripts\activate   (Windows)
+venv\Scripts\activate
 ```
-
----
 
 ### 3️⃣ Install dependencies
 
@@ -75,19 +78,19 @@ venv\Scripts\activate   (Windows)
 pip install -r requirements.txt
 ```
 
----
-
 ### 4️⃣ Configure Database
 
-Update your database URL in:
+Update:
 
-📁 `app/core/database.py`
+```
+app/core/database.py
+```
 
 ```
 DATABASE_URL = "mysql+pymysql://username:password@localhost/hospital_db"
 ```
 
-> ⚠️ If your password contains `@`, replace it with `%40`
+> ⚠️ Replace `@` in password with `%40` if needed
 
 ---
 
@@ -101,7 +104,7 @@ uvicorn app.main:app --reload
 
 ## 📄 API Documentation
 
-After running the server, open:
+Open in browser:
 
 ```
 http://127.0.0.1:8000/docs
@@ -111,58 +114,55 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 🔑 API Endpoints
+## 🔑 Core Endpoints
 
-### 👨‍⚕️ Doctors
+### Doctors
 
-* `POST /doctors/` → Create doctor
-* `GET /doctors/` → Get all doctors
-* `DELETE /doctors/{id}` → Delete doctor
+* `POST /doctors/`
+* `GET /doctors/`
+* `DELETE /doctors/{id}`
 
----
+### Patients
 
-### 🧑 Patients
+* `POST /patients/`
+* `GET /patients/`
+* `DELETE /patients/{id}` (Soft Delete)
 
-* `POST /patients/` → Create patient
-* `GET /patients/` → Get all active patients
-* `DELETE /patients/{id}` → Soft delete patient
+### Assignments
 
----
-
-### 🔗 Assignments
-
-* `POST /assignments/` → Assign patient to doctor
-* `GET /assignments/` → Get all assignments
-* `GET /assignments/doctor/{id}` → Get patients of a doctor
-* `PUT /assignments/discharge/{id}` → Discharge patient
+* `POST /assignments/`
+* `GET /assignments/`
+* `GET /assignments/doctor/{id}`
+* `PUT /assignments/discharge/{id}`
 
 ---
 
-## 🧠 Key Concepts Implemented
+## 🧠 Key Concepts
 
-* 🔄 One-to-Many Relationships (Doctor ↔ Assignments, Patient ↔ Assignments)
-* 🧹 Soft Delete (Patient deactivation)
-* 🚫 Duplicate Prevention Logic
-* 🔗 Automatic JOIN using SQLAlchemy relationships
+* ORM Relationships (Doctor ↔ Assignment ↔ Patient)
+* Soft Delete Pattern
+* Data Validation with Pydantic
+* REST API Design
+* Dependency Injection (FastAPI)
 
 ---
 
 ## 🔮 Future Improvements
 
-* 🔐 JWT Authentication (Login system)
+* 🔐 JWT Authentication
 * 🔑 Password Hashing
-* 🎨 Frontend (React / HTML UI)
-* 📊 Dashboard for Doctors & Patients
-* 📅 Appointment Scheduling System
+* 📅 Appointment Scheduling
+* 🎨 Frontend UI (React)
+* 📊 Admin Dashboard
 
 ---
 
 ## 👨‍💻 Author
 
-**Ratnambar baghel**
+**Ratnambar Baghel**
 
 ---
 
 ## ⭐ Support
 
-If you like this project, give it a ⭐ on GitHub!
+If you found this useful, give it a ⭐ on GitHub!
